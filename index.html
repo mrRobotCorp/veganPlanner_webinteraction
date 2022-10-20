@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="og:title" content="비플 : 비건 플래너" />
+    <meta property="og:url" content="https://mrrobotcorp.github.io/veganPlanner/" />
+    <meta property="og:image" content="https://mrrobotcorp.github.io/veganPlanner//source/ogImage.png" />
+    <meta property="og:description" content="쉬운 비건 쉬운 실천! 비플과 함께 해보세요." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="비플 : 비건 플래너" />
+    <meta name="twitter:url" content="https://mrrobotcorp.github.io/veganPlanner/" />
+    <meta name="twitter:image" content="https://mrrobotcorp.github.io/veganPlanner//source/ogImage.png" />
+    <meta name="twitter:description" content="쉬운 비건 쉬운 실천! 비플과 함께 해보세요." />
+    <meta name="description" content="쉬운 비건 쉬운 실천! 비플과 함께 해보세요.">
+    <meta name='keywords' content='비건, 비플, 비건플래너, 쉬운 실천, 투두리스트' />
+    
+    <link rel="icon" href="./source/favicon-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="./source/apple-icon-180x180.png" sizes="180x180" />
+    
+    <title>비플 : 비건 플래너</title>
+    
+    <link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+</head>
+
+<body>
+    <div class="loading">
+        <img id="loader" src="./source/loader.gif" alt="loading">
+    </div>
+
+    <header>
+        <div id="header">
+            <h1><a href="#firstPage"><img src="./source/BI_dark.png" alt="비플"></a></h1>
+            <nav>
+                <ul id="menu">
+                    <li data-menuanchor="4rdPage"><a href="#4rdPage">진단테스트</a></li>
+                    <li data-menuanchor="5rdPage"><a href="#5rdPage">투두리스트</a></li>
+                    <li data-menuanchor="8rdPage"><a href="#8rdPage">커뮤니티</a></li>
+                    <li data-menuanchor="9rdPage"><a href="#9rdPage">포인트 상점</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="intro">
+                <div id="easyVegan"></div>
+                <h2>비건 플래너</h2>
+                <p>
+                    <span>overview</span><br>
+                    진단테스트로 나의 비건 성향에 대해 알고 입문! <br> 투두리스트를 하며 채식을 실천해보자! <br>
+                    커뮤니티로 사람들과 정보를 공유하고 소통하며 포인트를 모으고 혜택을 받다 보면, 당신은 비건!
+                </p>
+            </div>
+            <a href="#secondPage" id="toDown"><div id="down"></div></a>
+            <div id="section0_right">
+                <img id="appSpalsh" src="./source/section0_splash.png" alt="앱 스플래쉬 화면">
+                <img id="appTest" src="./source/section0_test.png" alt="앱 진단테스트 화면">
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div>
+                <h2>Promotion video</h2>
+                <iframe width= "1005" height="565" src="https://www.youtube.com/embed/_sEY7ck7Afo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="section inner" id="section2">
+            <div class="slide active" id="slide1">
+                <h2 class="blind">디자인 컨셉</h2>
+                <div class="intro">
+                    <h3>Logo</h3>
+                    <p class="logoInfo logoInfo1"></p>
+                    <p class="logoInfo logoInfo2"></p>
+                </div>
+                <img class="icon" src="./source/section2-1_logo.svg" alt="로고와 아이콘 이미지">
+            </div>
+
+            <div class="slide" id="slide2">
+                <div>
+                    <h3>Color</h3>
+                    <p class="colorInfo"></p>
+                    <div id="keyword">
+                        <span class="keyword keyword1"></span>
+                        <span class="keyword keyword2"></span>
+                        <span class="keyword keyword3"></span>
+                    </div>
+                </div>
+                <img id="color" src="./source/section2-2_color.svg" alt="컨셉컬러 이미지">
+            </div>
+
+            <div class="slide" id="slide3">
+                <div>
+                    <h3>Typeface</h3>
+                    <img id="fontType" src="./source/section2-3_left.svg" alt="노토산스 굵기 별 타입 이미지">
+                    <p class="fontInfo"></p>
+                </div>
+                <img id="useFont" src="./source/section2-3_right.svg" alt="노토산스와 티비스켓 서체 이미지">
+            </div>
+        </div>
+        
+        <div class="section inner" id="section3">
+            <img id="testSlide" src="./source/section3_test.gif" alt="진단테스트 질문 목록">
+            <div class="testInfo">
+                <h2>나의 <span class="green">비건 성향</span>은?</h2>
+                <p class="testTxt"></p>
+            </div>
+        </div>
+
+        <div class="section" id="section4">
+            <div id="todoInfo">
+                <h2>직접 <span class="white">실천</span>하는 <span class="white">투두 리스트</span>!</h2>
+                <p class="todoTxt"></p>
+            </div>
+            <img id="todo1" src="./source/todo1.svg" alt="투두리스트 기능 메뉴1">
+            <img id="todo2" src="./source/todo2.svg" alt="투두리스트 기능 메뉴2">
+        </div>
+        
+        <div class="section" id="section5">
+            <img id="todo3" src="./source/todo3.svg" alt="투두리스트 기능 메뉴3">
+            <img id="todo4" src="./source/todo4.svg" alt="투두리스트 기능 메뉴4">
+        </div>
+
+        <div class="section" id="section6">
+            <div id="todoTitle">
+                <h2><span class="green">투두 리스트</span>를 직접 작성하고 실천해봐요!</h2>
+                <p class="customTxt">나만의 커스텀 투두리스트를 채워보자!</p>
+            </div>
+
+            <div class="container">
+                <div id="todoLeft">
+                    <ul id="todoList"></ul>
+                </div>
+                <div class="form-group">
+                    <label for="itemInput">리스트 추가하기</label>
+                    <input type="text" class="form-control" id="itemInput" maxlength="14">
+                    <div>
+                        <button id="addButton" class="btn btn-primary">추가하기</button>
+                        <button id="clearButton" class="btn btn-danger">모두 삭제</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section inner" id="section7">
+            <div class="commuInfo">
+                <h2>함께 <span class="green">공유</span>하는 <span class="green">커뮤니티</span></h2>
+                <p class="communityTxt"></p>
+            </div>
+            <img id="community" src="./source/section7_all.svg" alt="커뮤니티 메뉴 이미지">
+        </div>
+
+        <div class="section" id="section8">
+            <div>
+                <h2><span class="green">포인트</span>를 모아 <span class="green">선물 교환</span>!</h2>
+                <p class="pointTxt"></p>
+                <img id="point" src="./source/section8.svg" alt="포인트 메뉴 이미지">
+            </div>
+        </div>
+
+        <div class="section" id="section9">
+        </div>
+
+        <div class="section fp-auto-height" id="footerWrap">
+            <div class="footer">
+                <ul id="sns">
+                    <li><img src="./source/twitter.png" alt="sns"></li>
+                    <li><img src="./source/instagram.png" alt="sns"></li>
+                    <li><img src="./source/kakao.png" alt="sns"></li>
+                    <li><img src="./source/facebook.png" alt="sns"></li>
+                </ul>
+                <div id="footerInfo">
+                    <dl>
+                        <dt>Project</dt>
+                        <dd>비건 플래너</dd>
+                    </dl>
+                    <dl>
+                        <dt>Team</dt>
+                        <dd>김유진</dd>
+                        <dd>김윤아</dd>
+                        <dd>장형선</dd>
+                    </dl>
+                    <dl>
+                        <dt>Contact Us</dt>
+                        <dd><a href="mailto:karen0708@naver.com">karen0708@naver.com</a></dd>
+                    </dl>
+                </div>
+                <p id="copyright">Copyrightⓒ 2022 VEGAN PLANNER All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#firstPage">
+        <div id="scrollTop">
+            <span class="blind">맨 위로 가기</span><div class="topTxt">Top</div>
+        </div>
+    </a>
+
+    <script src="./js/fullpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
