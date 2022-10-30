@@ -3,13 +3,57 @@ window.onload = function(){
     // ------------------ loading hide ------------------
     document.querySelector(".loading").style.visibility = "hidden";
 
-    // ------------------- section setting ----------------
-    var myFullpage = new fullpage('#fullpage', {
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage', '5rdPage', '6rdPage', '7rdPage', '8rdPage', '9rdPage' ],
-        navigation: true,
-        showActiveTooltip: true,
-        menu: '#menu'
-    });
+
+    // ------------------ scroll move ------------------------------
+    document.getElementById("bi").onclick = function () {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+    document.getElementById("down").onclick = function () {
+        window.scrollTo({
+            top: 692,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+    document.getElementById("menu0").onclick = function () {
+        window.scrollTo({
+            top: 2176,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+    document.getElementById("menu1").onclick = function () {
+        window.scrollTo({
+            top: 2994,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+    document.getElementById("menu2").onclick = function () {
+        window.scrollTo({
+            top: 5187,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+    document.getElementById("menu3").onclick = function () {
+        window.scrollTo({
+            top: 5955,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+    document.getElementById("scrollTop").onclick = function () {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
 
     // --------------------- todo list --------------------
     var addButton = document.getElementById('addButton');
@@ -145,4 +189,9 @@ window.onload = function(){
     document.querySelector(".todoTxt").innerText = "투두리스트를 통해 실생활에서 직접 비건을 실천해보자!";
     document.querySelector(".communityTxt").innerText = "모두와 서로 도우며 비건 생활을 더욱 윤택하게 만들어보자!";
     document.querySelector(".pointTxt").innerText = "모두와 서로 도우며 비건 생활을 더욱 윤택하게 만들어보자!";   
+
 }
+
+$(document).ready(function() {
+    $('.single-item').slick();
+})

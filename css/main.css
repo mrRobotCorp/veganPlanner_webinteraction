@@ -13,13 +13,15 @@ abbr,acronym { border: 0; }
 /* ------------------------------------------- */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-* { font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; }
-body { color: #00203F; } 
-body #fullpage { margin: 0 auto; } 
+* { font-family: Pretendard, -apple-system,'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; }
+body { color: #00203F; overflow-x: hidden; }
 .blind { display: none; } 
 .inner { width: 1200px; margin: 0 auto; } 
-.section { text-align:center; } 
+section { height: 100vh; text-align: center; display: flex; align-items: center; } 
 
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background-color: #2CD18A; border-radius: 10px; }
+::-webkit-scrollbar-track { background-color: transparent; z-index: -10;}
 ::selection { background-color: #2dde91; color: #fff; } 
 
 .green { color: #2CD18A; } 
@@ -29,12 +31,12 @@ body #fullpage { margin: 0 auto; }
 .loading #loader { width: 800px; position: absolute; left: 50%; top: 50%; z-index: 1; margin: -250px 0 0 -400px; }
 
 /* ------------------- header ----------------------- */
-header { width: 1200px; margin: 0 auto; } 
-#header {  width: 1200px; display: flex; justify-content: space-between; position: fixed; z-index: 100; } 
+header { width: 100%; height: 76px; display: flex; align-items: flex-end; position: fixed; top: 0; left: 0; transition: top .7s;  z-index: 100;  } 
+#header {  width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; margin-bottom: 5px;} 
 #header h1 { cursor: pointer; } 
 #header h1 img { width: 70px; margin-top: 25px; } 
 #header nav #menu { margin-top: 30px; } 
-#header nav #menu li { display: inline; margin: 22px 15px; padding: 5px 3px; font-family: Pretendard; font-weight: bold; font-size: 16px; color: #000; cursor: pointer; } 
+#header nav #menu li { display: inline; margin: 22px 15px; padding: 5px 3px; font-family: Pretendard; font-weight: bold; font-size: 16px; cursor: pointer; } 
 #header nav #menu li.active { border-bottom: 2px solid #000; } 
 #header nav #menu li a { text-decoration:none; color: #000; } 
 #header nav #menu li:hover { border-bottom: 2px solid #000; } 
@@ -54,33 +56,33 @@ header { width: 1200px; margin: 0 auto; }
 #section0 #section0_right #appTest { position: absolute; top: 60px; right: 15px; width: 280px; transition: all .3s; } 
 #section0 #section0_right #appTest:hover { transform: scale(1.05); } 
 
-#section0 #toDown { position: absolute; bottom: 40px; } 
-#section0 #down { width: 35px; animation: fade-in-top 0.7s cubic-bezier(0.445, 0.050, 0.550, 0.950) 3s both; } 
+#section0 #down { position: absolute; bottom: 40px; width: 35px; animation: fade-in-top 0.7s cubic-bezier(0.445, 0.050, 0.550, 0.950) 3s both; cursor: pointer; } 
 #section0 #down::before { content: url(../source/down_arrow.svg); opacity: .5; } 
 #section0 #down:hover::before { opacity: 1; } 
 
 /* ------------------- section1 ----------------------- */
 #section1 { flex-direction: column; } 
-#section1 div { width: 940px; margin-top: 30px; } 
+#section1 div { width: 1100px; margin-top: 30px; } 
 #section1 h2 { float: left; font-size: 23px; margin-bottom: 7px; } 
 #section1 iframe { margin: 10px auto; border-radius: 10px; border: none; } 
 
 /* ------------------- section2 ----------------------- */
 #section2 { text-align: left; } 
 #section2 h3 { margin-bottom: 30px; font-size: 35px; } 
-#section2 #slide1 .logoInfo { width: 360px; font-weight: 400; font-size: 15px; line-height: 175%; text-align: justify; color: #404040; } 
-#section2 #slide1 .logoInfo2 { margin-top: 60px; } 
-#section2 #slide1 .icon { width: 530px; margin:40px 0 0 100px; } 
+#section2 .slide { display: flex; justify-content: space-around;}
+#section2 .slide0 .logoInfo { width: 360px; font-weight: 400; font-size: 15px; line-height: 175%; text-align: justify; color: #404040; } 
+#section2 .slide0 .logoInfo2 { margin-top: 60px; } 
+#section2 .slide0 .icon { width: 530px; margin:40px 0 0 100px; } 
 
-#section2 #slide2 .colorInfo { width: 310px; margin-top: 50px; font-weight: 400; font-size: 15px; line-height: 175%; color: #404040; } 
-#section2 #slide2 #color { width: 690px; margin-top: 15px; margin-left: 70px; filter: drop-shadow(0px 3px 7px #9898988a); } 
-#section2 #slide2 #keyword { margin-top: 150px; } 
-#section2 #slide2 #keyword .keyword { color: #2CD18A; border: 2px solid #2CD18A; border-radius: 20px; font-size: 14px; padding: 5px 12px; margin-right: 8px; transition: all .3s; } 
-#section2 #slide2 #keyword .keyword:hover { color: #fff; background-color: #2CD18A; } 
+#section2 .slide1 .colorInfo { width: 310px; margin-top: 50px; font-weight: 400; font-size: 15px; line-height: 175%; color: #404040; } 
+#section2 .slide1 #color { width: 690px; margin-top: 15px; margin-left: 70px; filter: drop-shadow(0px 3px 7px #9898988a); } 
+#section2 .slide1 #keyword { margin-top: 150px; } 
+#section2 .slide1 #keyword .keyword { color: #2CD18A; border: 2px solid #2CD18A; border-radius: 20px; font-size: 14px; padding: 5px 12px; margin-right: 8px; transition: all .3s; } 
+#section2 .slide1 #keyword .keyword:hover { color: #fff; background-color: #2CD18A; } 
 
-#section2 #slide3 #fontType { width: 500px; margin-bottom: 70px; } 
-#section2 #slide3 #useFont { width: 300px; margin: 20px 0 0 100px; } 
-#section2 #slide3 .fontInfo { color: #A1A1A1; font-size: 14px; font-weight: 300; } 
+#section2 .slide2 #fontType { width: 500px; margin-bottom: 70px; } 
+#section2 .slide2 #useFont { width: 300px; margin: 20px 0 0 100px; } 
+#section2 .slide2 .fontInfo { color: #A1A1A1; font-size: 14px; font-weight: 300; } 
 
 /* ------------------- section3 ----------------------- */
 #section3 #testSlide { width: 770px; margin-top: 30px; }
@@ -101,7 +103,7 @@ header { width: 1200px; margin: 0 auto; }
 
 /* ------------------- section6 todo list --------------------- */
 #section6 { background: url(../source/section6_BG.svg) center no-repeat; background-size: cover; flex-direction: column; } 
-#section6 #todoTitle { position: absolute; top: 14%;}
+#section6 #todoTitle { margin-top: 30px;}
 
 #section6 .container { position: relative; height: 100vh; width: 100vw;}
 #section6 .container #todoLeft { position: absolute; top: 37%; left: 24.5%; width: 345px; height: 280px; overflow-y: scroll; margin-right: 80px; } 
