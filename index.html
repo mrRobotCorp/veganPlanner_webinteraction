@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta property="og:title" content="비플 : 비건 플래너" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:url" content="https://mrrobotcorp.github.io/" />
-    <meta property="og:image" content="https://mrrobotcorp.github.io/veganPlanner//source/ogImage.png" />
+    <meta property="og:image" content="https://mrrobotcorp.github.io/?//source/" />
     <meta property="og:description" content="쉬운 비건 쉬운 실천! 비플과 함께 해보세요." />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="비플 : 비건 플래너" />
     <meta name="twitter:url" content="https://mrrobotcorp.github.io/" />
-    <meta name="twitter:image" content="https://mrrobotcorp.github.io/veganPlanner//source/ogImage.png" />
+    <meta name="twitter:image" content="https://mrrobotcorp.github.io/?//source/" />
     <meta name="twitter:description" content="쉬운 비건 쉬운 실천! 비플과 함께 해보세요." />
     <meta name="description" content="쉬운 비건 쉬운 실천! 비플과 함께 해보세요.">
     <meta name='keywords' content='비건, 비플, 비건플래너, 쉬운 실천, 투두리스트' />
-    
+    <title>비플 | 비건플래너</title>
+
     <link rel="icon" href="./source/favicon-32x32.png" sizes="32x32" />
     <link rel="apple-touch-icon" href="./source/apple-icon-180x180.png" sizes="180x180" />
-    
-    <title>비플 : 비건 플래너</title>
-    
-    <!-- <link rel="stylesheet" type="text/css" href="./css/fullpage.css" /> -->
+
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 </head>
-
 <body>
-    <div class="loading">
-        <img id="loader" src="./source/loader.gif" alt="loading">
-    </div>
-
     <header>
-        <div id="header">
-            <h1><img src="./source/BI_dark.png" alt="비플" id="bi"></h1>
+        <div class="headerInner inner">
+            <h1><img src="./source/BI.png" alt="비플" class="headBI"></h1>
             <nav>
                 <ul id="menu">
                     <li id="menu0">진단테스트</li>
@@ -44,137 +40,174 @@
         </div>
     </header>
 
-    <section id="section0">
-        <div class="intro">
-            <div id="easyVegan"></div>
-            <h2>비건 플래너</h2>
-            <p>
-                <span>overview</span><br>
-                진단테스트로 나의 비건 성향에 대해 알고 입문! <br> 투두리스트를 하며 채식을 실천해보자! <br>
-                커뮤니티로 사람들과 정보를 공유하고 소통하며 포인트를 모으고 혜택을 받다 보면, 당신은 비건!
+    <section class="mainBanner inner">
+        <h2 class="blind">비건 플래너 메인 배너</h2>
+        <article>
+            <h3><img class="mainHeadTxt" src="./source/main_headTxt.png" alt="비건 플래너"></h3>
+            <h4>Overview</h4> 
+            <p class="mainTxt">
+                진단테스트로 나의 비건 성향에 대해 알아보자! <br>
+                투두리스트로 비건을 실천하고, <br>
+                정보를 공유하며 소통할 수 있어요.<br>
+                이 모든 서비스를 경험하며 편한 비건 생활을 즐겨보세요.
             </p>
-        </div>
-        <div id="down"></div>
-        <div id="section0_right">
-            <img id="appSpalsh" src="./source/section0_splash.png" alt="앱 스플래쉬 화면">
-            <img id="appTest" src="./source/section0_test.png" alt="앱 진단테스트 화면">
-        </div>
-    </section>
-
-    <section id="section1">
-        <div>
-            <h2>Promotion video</h2>
-            <iframe width= "1005" height="565" src="https://www.youtube.com/embed/_sEY7ck7Afo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </article>
+        <div class="mainBanner_right">
+            <img class="appSpalsh" src="./source/main_splash.png" alt="앱 스플래쉬 화면">
+            <img class="appTest" src="./source/main_test.png" alt="앱 진단테스트 화면">
         </div>
     </section>
 
-    <section class="inner single-item" id="section2">
-        <div class="slide slide0">
-            <h2 class="blind">디자인 컨셉</h2>
-            <div class="intro">
-                <h3>Logo</h3>
-                <p class="logoInfo logoInfo1"></p>
-                <p class="logoInfo logoInfo2"></p>
-            </div>
-            <img class="icon" src="./source/section2-1_logo.svg" alt="로고와 아이콘 이미지">
-        </div>
+    
+    <section class="designSection">
+        <h2 class="blind">디자인 소개</h2>
+        <article class="inner">
+            <h3>Logo</h3>
+            <ul>
+                <li class="logoTxt">
+                    앱 로고는 미소 짓는 입과 이파리를 응용한 형태로, 즐겁게 비건을 실천하는 이용자를 표현합니다. 
+                    노트 안 새싹은 이용자의 즐거움과 도전이 기록됨을 상징합니다.
+                </li>
+                <li><img class="appLogo" alt="앱 로고 스케치" src="./source/appLogo_sketch.png"></li>
+                <li><img class="appLogo" alt="앱 로고 그린" src="./source/appLogo_grn.png"></li>
+                <li><img class="appLogo" alt="앱 로고 네이비" src="./source/appLogo_nvy.png"></li>
+            </ul>
+            <ul>
+                <li class="logoTxt">
+                    비건과 플래너의 합성어와, 비건하는 피플(people)의 줄임말, 2가지의 중의적인 의미를 담았습니다. 
+                    글자에 자라나는 이파리는 목표를 달성하는 깃발을 상징합니다.
+                </li>
+                <li><img class="sLogo" alt="서비스 로고 스케치" src="./source/sLogo_sketch.png"></li>
+                <li><img class="sLogo" alt="서비스 로고 그린" src="./source/sLogo_grn.png"></li>
+                <li><img class="sLogo" alt="서비스 로고 네이비" src="./source/sLogo_nvy.png"></li>
+            </ul>
+        </article>
 
-        <div class="slide slide1">
-            <div>
-                <h3>Color</h3>
-                <p class="colorInfo"></p>
-                <div id="keyword">
-                    <span class="keyword keyword1"></span>
-                    <span class="keyword keyword2"></span>
-                    <span class="keyword keyword3"></span>
+        <article class="inner">
+            <h3></h3>
+        </article>
+    </section>
+
+    <section class="promoVid">
+        <h2>Promotion video</h2>
+        <article>
+            <iframe src="https://www.youtube.com/embed/_sEY7ck7Afo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </article>
+    </section>
+    
+    <section class="testSection inner">
+        <h2>나의 <span>비건 성향</span>은?</h2>
+        <article>
+            <div class="testFrame">
+                <div class="testImg">
+                </div>
+                <div class="testBtn">
+                    <button>네</button>
+                    <button>모르겠다</button>
+                    <button>아니오</button>
                 </div>
             </div>
-            <img id="color" src="./source/section2-2_color.svg" alt="컨셉컬러 이미지">
-        </div>
+        </article>
+    </section>
 
-        <div class="slide slide2">
+    <section>
+        <h2>
+            직접 <span>실천</span>하는 <span>투두 리스트</span>!
+        </h2>
+        <article>
             <div>
-                <h3>Typeface</h3>
-                <img id="fontType" src="./source/section2-3_left.svg" alt="노토산스 굵기 별 타입 이미지">
-                <p class="fontInfo"></p>
+                <img id="todo1" src="./source/todo1.svg" alt="투두리스트 기능 메뉴1">
+                <p>쉽게 투두 리스트를 실천하고 포인트를 모아봅시다!</p>
+                <p>쉽게 추가하고 수정할 수 있어요!</p>
             </div>
-            <img id="useFont" src="./source/section2-3_right.svg" alt="노토산스와 티비스켓 서체 이미지">
-        </div>
-    </section>
-    
-    <section class="inner" id="section3">
-        <img id="testSlide" src="./source/section3_test.gif" alt="진단테스트 질문 목록">
-        <div class="testInfo">
-            <h2>나의 <span class="green">비건 성향</span>은?</h2>
-            <p class="testTxt"></p>
-        </div>
-    </section>
-
-    <section id="section4">
-        <div id="todoInfo">
-            <h2>직접 <span class="white">실천</span>하는 <span class="white">투두 리스트</span>!</h2>
-            <p class="todoTxt"></p>
-        </div>
-        <img id="todo1" src="./source/todo1.svg" alt="투두리스트 기능 메뉴1">
-        <img id="todo2" src="./source/todo2.svg" alt="투두리스트 기능 메뉴2">
-    </section>
-    
-    <section id="section5">
-        <img id="todo3" src="./source/todo3.svg" alt="투두리스트 기능 메뉴3">
-        <img id="todo4" src="./source/todo4.svg" alt="투두리스트 기능 메뉴4">
-    </section>
-
-    <section id="section6">
-        <div id="todoTitle">
-            <h2><span class="green">투두 리스트</span>를 직접 작성하고 실천해봐요!</h2>
-            <p class="customTxt">나만의 커스텀 투두리스트를 채워보자!</p>
-        </div>
-
-        <div class="container">
-            <div id="todoLeft">
-                <ul id="todoList"></ul>
+            <div>
+                <img id="todo1" src="./source/todo1.svg" alt="투두리스트 기능 메뉴1">
+                <p>쉽게 투두 리스트를 실천하고 포인트를 모아봅시다!</p>
+                <p>쉽게 추가하고 수정할 수 있어요!</p>
             </div>
-            <div class="form-group">
-                <label for="itemInput">리스트 추가하기</label>
-                <input type="text" class="form-control" id="itemInput" maxlength="14">
-                <div>
-                    <button id="addButton" class="btn btn-primary">추가하기</button>
-                    <button id="clearButton" class="btn btn-danger">모두 삭제</button>
+            <div>
+                <img id="todo1" src="./source/todo1.svg" alt="투두리스트 기능 메뉴1">
+                <p>쉽게 투두 리스트를 실천하고 포인트를 모아봅시다!</p>
+                <p>쉽게 추가하고 수정할 수 있어요!</p>
+            </div>
+            <div>
+                <img id="todo1" src="./source/todo1.svg" alt="투두리스트 기능 메뉴1">
+                <p>쉽게 투두 리스트를 실천하고 포인트를 모아봅시다!</p>
+                <p>쉽게 추가하고 수정할 수 있어요!</p>
+            </div>
+            <div>
+                <img id="todo1" src="./source/todo1.svg" alt="투두리스트 기능 메뉴1">
+                <p>쉽게 투두 리스트를 실천하고 포인트를 모아봅시다!</p>
+                <p>쉽게 추가하고 수정할 수 있어요!</p>
+            </div>
+            <div>
+                <img id="todo1" src="./source/todo1.svg" alt="투두리스트 기능 메뉴1">
+                <p>쉽게 투두 리스트를 실천하고 포인트를 모아봅시다!</p>
+                <p>쉽게 추가하고 수정할 수 있어요!</p>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <h2>투두리스트, 체험해봅시다!</h2>
+        <article>
+            <div class="container">
+                <div id="todoLeft">
+                    <ul id="todoList"></ul>
+                </div>
+                <div class="form-group">
+                    <label for="itemInput">리스트 추가하기</label>
+                    <input type="text" class="form-control" id="itemInput" maxlength="14">
+                    <div>
+                        <button id="addButton" class="btn btn-primary">추가하기</button>
+                        <button id="clearButton" class="btn btn-danger">모두 삭제</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section class="inner" id="section7">
-        <div class="commuInfo">
-            <h2>함께 <span class="green">공유</span>하는 <span class="green">커뮤니티</span></h2>
-            <p class="communityTxt"></p>
-        </div>
-        <img id="community" src="./source/section7_all.svg" alt="커뮤니티 메뉴 이미지">
+        </article>
     </section>
 
-    <section id="section8">
-        <div>
-            <h2><span class="green">포인트</span>를 모아 <span class="green">선물 교환</span>!</h2>
-            <p class="pointTxt"></p>
-            <img id="point" src="./source/section8.svg" alt="포인트 메뉴 이미지">
-        </div>
+    <section>
+        <h2>
+            함께 <span class="green">공유</span>하는 <span class="green">커뮤니티</span>
+        </h2>
+        <article>
+            <img alt="" src="">
+        </article>
     </section>
 
-    <section id="section9">
+    <section>
+        <h2>
+            <span class="green">포인트</span>를 모아 <span class="green">선물 교환</span>!
+        </h2>
+        <article>
+            
+        </article>
     </section>
 
-    <footer id="footerWrap">
+    <section>
+        <h2>비건 플래너</h2>
+        <article>
+            <p>
+                진단테스트로 나의 비건 성향에 대해 알고 입문!
+                투두리스트를 하며 채식을 실천해보자!
+                커뮤니티로 사람들과 정보를 공유하고 소통하며
+                포인트를 모으고 혜택을 받다 보면, 당신은 비건!
+            </p>
+        </article>
+    </section>
+
+    <footer>
         <div id="scrollTop">
             <span class="blind">맨 위로 가기</span><div class="topTxt">Top</div>
         </div>
 
 
         <ul id="sns">
-            <li><img src="./source/twitter.png" alt="sns"></li>
-            <li><img src="./source/instagram.png" alt="sns"></li>
-            <li><img src="./source/kakao.png" alt="sns"></li>
-            <li><img src="./source/facebook.png" alt="sns"></li>
+            <li><img src="" alt="sns"></li>
+            <li><img src="" alt="sns"></li>
+            <li><img src="" alt="sns"></li>
+            <li><img src="" alt="sns"></li>
         </ul>
         <div id="footerInfo">
             <dl>
@@ -189,16 +222,16 @@
             </dl>
             <dl>
                 <dt>Contact Us</dt>
-                <dd><a href="mailto:karen0708@naver.com">karen0708@naver.com</a></dd>
+                <dd><a href="mailto:depo89055@gmail.com">depo89055@gmail.com</a></dd>
             </dl>
         </div>
         <p id="copyright">Copyrightⓒ 2022 VEGAN PLANNER All rights reserved.</p>
     </footer>
-    
 
-    <!-- <script src="./js/fullpage.js"></script> -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./js/script.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
 </body>
+</html>

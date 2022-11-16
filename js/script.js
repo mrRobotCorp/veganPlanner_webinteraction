@@ -4,6 +4,21 @@ window.onload = function(){
     document.querySelector(".loading").style.visibility = "hidden";
 
 
+    // -------------------------------------------------------
+    const arrowAll = document.createElement("div");
+    arrowAll.setAttribute("class", "arrowAll");
+
+    document.querySelector('.mainBanner'),append(arrowAll);
+
+    const arrow0 = document.createElement("div");
+    arrow0.setAttribute("class", "chevron");
+    const arrow1 = document.createElement("div");
+    arrow1.setAttribute("class", "chevron");
+    const arrow2 = document.createElement("div");
+    arrow2.setAttribute("class", "chevron");
+
+    arrowAll.prepend(arrow0, arrow1, arrow2);
+
     // ------------------ scroll move ------------------------------
     document.getElementById("bi").onclick = function () {
         window.scrollTo({
