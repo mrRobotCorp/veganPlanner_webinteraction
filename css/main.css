@@ -376,10 +376,18 @@ header .headerInner nav #menu li.active a {
 }
 
 /* ------------------- todo list --------------------- */
-#section6 {
-    background: url(../source/section6_BG.svg) center no-repeat;
+.todoListInfo {
+    height: 250vh;
+    background: url(../source/todoList_bg.png) center center no-repeat;
     background-size: cover;
-    flex-direction: column;
+}
+
+.todoListInfo article {
+    display: grid;
+}
+
+.todoListInfo article .todoFrame {
+    width: 30%;
 }
 
 #section6 #todoTitle {
