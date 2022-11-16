@@ -133,7 +133,7 @@ header .headerInner nav #menu li.active a {
     margin: calc(100vw * 25 / 1920) 0;
     color: #00203F;
     font-size: calc(100vw * 25 / 1920);
-    font-weight: 600;
+    font-weight: 200;
 }
 
 .mainBanner article h4::before {
@@ -141,9 +141,9 @@ header .headerInner nav #menu li.active a {
     position: absolute;
     top: 50%;
     left: -2%;
-    width: calc(100vw * 380 / 1920);
-    height: calc(100vw * 20 / 1920);
-    background: #2cd18a4e;
+    width: calc(100vw * 370 / 1920);
+    height: calc(100vw * 22 / 1920);
+    background: #2cd18a37;
     z-index: -1;
 }
 
@@ -294,21 +294,29 @@ header .headerInner nav #menu li.active a {
 
 /* ------------------- section2 ----------------------- */
 .designSection h3 {
+    margin-bottom: calc( 100vw * 40 / 1920 );
     font-size: calc( 100vw * 37 / 1920 );
 }
 
+.designSection .logoProcess {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .designSection .appLogo,
 .designSection .sLogo {
-    width: 30%;
+    width: 50%;
 }
 
 .designSection article ul li {
     display: inline-block;
-    padding: calc( 100vw * 10 / 1920) calc( 100vw * 20 / 1920);
+    padding: calc( 100vw * 10 / 1920) 0;
 }
 
 .designSection article .logoTxt {
     width: calc( 100vw * 400 / 1920 );
+    margin-right: 10%;
     line-height: 150%;
 }
 
@@ -319,11 +327,30 @@ header .headerInner nav #menu li.active a {
 }
 
 /* ------------------- section4 ----------------------- */
+.testSection {
+    margin-top: 10%;
+}
+.testSection h2 {
+    float: right;
+}
+
 .testSection .testFrame {
     background: url(../source/mockup_bg.png) center center no-repeat;
     background-size: contain;
     width: calc( 100vw * 400 / 1920 );
     height: calc( 100vw * 800 / 1920 );
+    overflow-y: hidden;
+}
+
+.testSection .testFrame .testImg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: calc( 100vw * 120 / 1920 ) 2% calc( 100vw * 50 / 1920 ) 12%;
+}
+
+.testSection .testFrame .testImg img {
+    width: 90%;
 }
 
 .testSection .testBtn {
