@@ -271,27 +271,6 @@ header .headerInner nav #menu li.active a {
     }
 }
 
-/* ------------------- section1 ----------------------- */
-#section1 {
-    flex-direction: column;
-}
-
-#section1 div {
-    width: 1100px;
-    margin-top: 30px;
-}
-
-#section1 h2 {
-    float: left;
-    font-size: 23px;
-    margin-bottom: 7px;
-}
-
-#section1 iframe {
-    margin: 10px auto;
-    border-radius: 10px;
-    border: none;
-}
 
 /* ------------------- section2 ----------------------- */
 .designSection h3 {
@@ -379,7 +358,8 @@ header .headerInner nav #menu li.active a {
 
 /* ------------------- todo list --------------------- */
 .todoListInfo {
-    height: 250vh;
+    height: 270vh;
+    padding: calc( 100vw * 100 / 1920 ) 0;
     background: url(../source/todoList_bg.png) center center no-repeat;
     background-size: cover;
 }
@@ -388,23 +368,28 @@ header .headerInner nav #menu li.active a {
     text-align: center;
 }
 
-.todoListInfo article {
+.todoListInfo .todoFrameAll {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.todoListInfo article div {
-    position: relative;
+.todoListInfo .todoFrameAll div {
+    position: absolute;
 }
 
 .todoListInfo article .todoFrame {
-    width: 30%;
+    width: 45%;
 }
 
 /* ------------------- section7, 8, 9 ----------------------- */
 
 /* -------------- footer ------------------ */
-#scrollTop {
+footer {
+    font-size: calc( 100vw * 17 / 1920 );
+}
+
+footer #scrollTop {
     border: 1.5px solid #00203F;
     align-content: center;
     width: 40px;
@@ -419,13 +404,13 @@ header .headerInner nav #menu li.active a {
     cursor: pointer;
 }
 
-#scrollTop:hover {
+footer #scrollTop:hover {
     transition: 0.4s;
     color: #fff;
     background-color: #00203F;
 }
 
-#scrollTop::before {
+footer #scrollTop::before {
     content: "\2303";
     position: absolute;
     width: 50px;
@@ -436,22 +421,24 @@ header .headerInner nav #menu li.active a {
     transition: .4s;
 }
 
-#scrollTop:hover:before {
+footer #scrollTop:hover:before {
     color: #fff;
 }
 
-#scrollTop a:active {
+footer #scrollTop a:active {
     color: #00203F;
 }
 
-#scrollTop .topTxt {
+footer #scrollTop .topTxt {
     display: block;
     margin-top: 17px;
     font-size: 10px;
 }
 
-#footerWrap {
-    text-align: left;
+footer .footerInfo {
+    display: flex;
+    justify-content: space-between;
+    
 }
 
 #footerWrap .footer {
