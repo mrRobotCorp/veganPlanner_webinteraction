@@ -1,61 +1,58 @@
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function() {
 
     // ------------------ loading hide ------------------
-    document.querySelector(".loading").style.visibility = "hidden";
+    // document.querySelector(".loading").style.visibility = "hidden";
 
 
     // -------------------------------------------------------
     const arrowAll = document.createElement("div");
     arrowAll.setAttribute("class", "arrowAll");
 
-    document.querySelector('.mainBanner'),append(arrowAll);
-
-    const arrow0 = document.createElement("div");
-    arrow0.setAttribute("class", "chevron");
-    const arrow1 = document.createElement("div");
-    arrow1.setAttribute("class", "chevron");
-    const arrow2 = document.createElement("div");
-    arrow2.setAttribute("class", "chevron");
-
-    arrowAll.prepend(arrow0, arrow1, arrow2);
+    document.querySelector('.mainBanner_right').insertAdjacentHTML('afterend', `
+        <div class='arrowAll'>
+            <div class='chevron'></div>
+            <div class='chevron'></div>
+            <div class='chevron'></div>
+        </div>
+    `);
 
     // ------------------ scroll move ------------------------------
-    document.getElementById("bi").onclick = function () {
+    document.querySelector('.headBI').onclick = function () {
         window.scrollTo({
             top: 0,
             left: 0,
             behavior: 'smooth'
         });
     }
-    document.getElementById("down").onclick = function () {
+    document.querySelector('.arrowAll').onclick = function () {
         window.scrollTo({
             top: 692,
             left: 0,
             behavior: 'smooth'
         });
     }
-    document.getElementById("menu0").onclick = function () {
+    document.querySelector('#menu0').onclick = function () {
         window.scrollTo({
             top: 2176,
             left: 0,
             behavior: 'smooth'
         });
     }
-    document.getElementById("menu1").onclick = function () {
+    document.querySelector('#menu1').onclick = function () {
         window.scrollTo({
             top: 2994,
             left: 0,
             behavior: 'smooth'
         });
     }
-    document.getElementById("menu2").onclick = function () {
+    document.querySelector('#menu2').onclick = function () {
         window.scrollTo({
             top: 5187,
             left: 0,
             behavior: 'smooth'
         });
     }
-    document.getElementById("menu3").onclick = function () {
+    document.querySelector('#menu3').onclick = function () {
         window.scrollTo({
             top: 5955,
             left: 0,
@@ -187,26 +184,35 @@ window.onload = function(){
     addButton.addEventListener('click', addToList);
     clearButton.addEventListener('click', clearList);
 
-    // ------------------- innerText ----------------------
-    document.getElementById("easyVegan").innerText = "쉬운 비건, 쉬운 실천!";
-    
-    document.querySelector(".logoInfo1").innerText = "비건플래너는 둥근 형태와 Sandoll 티비스켓 서체를 활용하여 친근감을 나타냅니다. 미소 짓는 입과 이파리를 응용한 형태는 즐겁게 비건을 실천하는 이용자를 표현합니다. 또한 새싹은 새로이 도전하는 사람들을 상징합니다. 마지막으로 투두노트를 상징하는 네모에 새싹, 즉 이용자의 즐거움과 도전이 기록됨을 상징합니다.";
-    document.querySelector(".logoInfo2").innerText = "비건과 플래너를 합친 단어와 비건하는 피플(people)의 줄임말로 이중적인 의미가 담겼습니다. 이러한 의미들을 담은 ‘비플’이이라는 글자에 자라나는 이파리를 달아 목표를 달성하는  깃발처럼 보이게 제작했습니다.";
-    document.querySelector(".colorInfo").innerText = "전체적으로 푸릇푸릇하고 시원안 비주얼을 컨셉으로하여 부드러운 화이트톤으로 안정감 있어 보이게했습니다.  시원한 녹색과 남색을 포인트 컬러로 사용했습니다.";
+    // ------------------- DOM element 추가  ----------------------
 
-    document.querySelector(".keyword1").innerText = "생기있는";
-    document.querySelector(".keyword2").innerText = "친근한";
-    document.querySelector(".keyword3").innerText = "부드러운";
+    const todoFrameAll = document.querySelector('.todoFrameAll');
+    todoFrameAll.insertAdjacentHTML('afterbegin', `
+        <div>
+            <img class='todoFrame todo0' src='./source/todoFrame0.png' alt='투두리스트 기능 메뉴1'>
+            <p class='leftLine todo0_txt0'>쉽게 투두 리스트를 실천하고 포인트를 모아봅시다!</p>
+            <p class='leftLine todo0_txt1'>쉽게 추가하고 수정할 수 있어요!</p>
+        </div>
+        <div>
+            <img class='todoFrame todo1' src='./source/todoFrame1.png' alt='투두리스트 기능 메뉴1'>
+            <p class='leftLine todo1_txt'>처음에 뭘 할지 모르겠으면 추천리스트를 해보세요!</p>
+        </div>
+        <div>
+            <img class='todoFrame todo2' src='./source/todoFrame2.png' alt='투두리스트 기능 메뉴1'>
+            <p class='rightLine todo2_txt0'>친구들과 함께라면 좀 더 열심히 할 수 있어요!</p>
+            <p class='rightLine todo2_txt1'>이미 달성한 친구를 보고 경쟁해봅시다!</p>
+            <p class='leftLine todo2_txt2'>힘내라고 하트를 눌러줘요! 모두 함께 힘내봅시다!</p>
+        </div>
+        <div>
+            <img class='todoFrame todo3' src='./source/todoFrame3.png' alt='투두리스트 기능 메뉴1'>
+            <p class='rightLine todo3_txt'>와! 벌써 이렇게 했다니! 내가 해낸 리스트를 보고 성취감을 느낄 수 있어요!</p>
+        </div>
+    `);
 
-    document.querySelector(".fontInfo").innerText = "Noto Sans로 가독성이 높은 서체로 전체 본문에 사용하였습니다.";
+    // document.getElementById("easyVegan").innerText = "쉬운 비건, 쉬운 실천!";
 
-    document.querySelector(".testTxt").innerText = "진단테스트로 나의 비건 성향에 대해 알아보자";
-    document.querySelector(".todoTxt").innerText = "투두리스트를 통해 실생활에서 직접 비건을 실천해보자!";
-    document.querySelector(".communityTxt").innerText = "모두와 서로 도우며 비건 생활을 더욱 윤택하게 만들어보자!";
-    document.querySelector(".pointTxt").innerText = "모두와 서로 도우며 비건 생활을 더욱 윤택하게 만들어보자!";   
-
-}
+});
 
 $(document).ready(function() {
-    $('.single-item').slick();
+    // $('.single-item').slick();
 })
