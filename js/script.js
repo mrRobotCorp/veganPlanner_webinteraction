@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // document.querySelector(".loading").style.visibility = "hidden";
 
 
-    // -------------------------------------------------------
+    // ------------------- 스크롤 유도 애니메이션 ------------------------------
     const arrowAll = document.createElement("div");
     arrowAll.setAttribute("class", "arrowAll");
 
@@ -67,7 +67,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // --------------------- todo list --------------------
+    // ---------------- 메인 배너 - 마우스 오버 이미지 변경 ---------------------------------
+    const appSplash = document.querySelector('.appSplash');
+
+    appSplash.addEventListener('mouseover', (e) => {
+        appSplash.setAttribute('src', './source/main_test.png');
+    });
+
+    appSplash.addEventListener('mouseout', (e) => {
+        appSplash.setAttribute('src', './source/main_splash.png');
+    });
+
+    // --------------------- todo list ----------------------
     var addButton = document.getElementById('addButton');
     var addInput = document.getElementById('itemInput');
     var todoList = document.getElementById('todoList');
@@ -77,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
         this.content = '';
         this.status = 'incomplete';
     }
+    
     var changeToComp = function(){
         var parent = this.parentElement;
         parent.className = 'uncompleted well';
@@ -120,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // ------------- 생성된 리스트의 체크, 삭제 버튼  -------------
     var createItemDom = function(text,status){
         var listItem = document.createElement('li');
         var itemLabel = document.createElement('label');
@@ -185,8 +198,9 @@ document.addEventListener("DOMContentLoaded", function() {
     clearButton.addEventListener('click', clearList);
 
     // ------------------- DOM element 추가  ----------------------
-
+    // 마크업 더러워서.. 일단 그냥 js로 추가...
     const todoFrameAll = document.querySelector('.todoFrameAll');
+    
     todoFrameAll.insertAdjacentHTML('afterbegin', `
         <div class='todoFrame0'>
             <img class='todoImg todo0' src='./source/todoFrame0.png' alt='투두리스트 기능 메뉴1'>
@@ -209,13 +223,44 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     `);
 
-    // document.getElementById("easyVegan").innerText = "쉬운 비건, 쉬운 실천!";
+    const typeWeight = document.querySelector('.typeWeight');
+
+    typeWeight.insertAdjacentHTML('afterend', `
+        <p class='weightTxt'>Light</p>
+    `);
 
 });
 
 $(document).ready(function() {
-    // $('.single-item').slick();
+    // ------ 디자인 소개 섹션 슬라이드 -------------
+    $('.designSection').slick();
+
     $('.testBtn button').click( function() {
         $('.testImg').css('left', '100px')
-    })
+    });
+
+    // ------------ 글자 굵기 증가 ------------------ 
+    let num = 300;
+    // let typeNum = $('.typeWeight').css('fontWeight');
+
+    $('.typeWeight').click( function() {
+        num = num + 100;
+
+        if ( num >= 1000 ) {
+            num = 300;
+            $('.typeWeight').css('fontWeight', 300);
+            $('.weightTxt').text('Light');
+        } else {
+            $('.typeWeight').css('fontWeight', num);
+        }
+
+        if( num == 500 ) {
+            $('.weightTxt').text('Regular');
+        } else if ( num == 700 ) {
+            $('.weightTxt').text('Medium');
+        } else if ( num >= 900 ) {
+            $('.weightTxt').text('Bold');
+        }
+        // switch 구문 사용
+    });
 })

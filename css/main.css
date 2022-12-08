@@ -58,7 +58,7 @@ header .headerInner nav #menu li.active a { color: #00203F; }
 
 .mainBanner .mainBanner_right::before { content: ''; position: absolute; top: 10%; left: 10%; background: #2CD18A; width: calc(100vw * 550 / 1920); height: calc(100vw * 550 / 1920); border-radius: 50%; z-index: -10; } 
 
-.mainBanner .appSpalsh { width: calc(100vw * 330 / 1920); } 
+.mainBanner .appSplash { width: calc(100vw * 330 / 1920);  } 
 
 .mainBanner .appTest { width: calc(100vw * 340 / 1920); margin-top: calc(100vw * 50 / 1920); } 
 
@@ -100,15 +100,29 @@ header .headerInner nav #menu li.active a { color: #00203F; }
 .designSection { padding: calc( 100vw * 100 / 1920 ) 0;}
 .designSection h3 { margin-bottom: calc( 100vw * 40 / 1920 ); font-size: calc( 100vw * 37 / 1920 ); } 
 
-.designSection .logoProcess { display: flex; justify-content: space-between; } 
-
-
+.designSection .design_logo .logoProcess { display: flex; justify-content: space-between; } 
 .designSection .appLogo,
 .designSection .sLogo { width: 50%; } 
 
-.designSection article ul li { display: inline-block; padding: calc( 100vw * 10 / 1920) 0; } 
+.designSection .design_logo ul li { display: inline-block; padding: calc( 100vw * 10 / 1920) 0; } 
+
+.designSection .design_color { display: flex; justify-content: space-between; align-items: center;}
+.designSection .design_color .colorKeyword { display: inline-block; padding: calc( 100vw * 9 / 1920 ) calc( 100vw * 18 / 1920 ); color: #2aae75; border: calc( 100vw * 1 / 1920 ) solid #2aae75; border-radius: calc( 100vw * 20 /1920 ); font-size: calc( 100vw * 18 / 1920 );}
+
+.designSection .design_color .colorAll { display: flex; flex-wrap: wrap; width: calc( 100vw * 800 / 1920 ); height: calc( 100vw * 500 / 1920 ); }
+.designSection .design_color .colorBox { padding: calc( 100vw * 20 / 1920 );}
+.designSection .design_color .colorWh { width: calc( 100vw * 500 / 1920 ); color: #00203F; }
+.designSection .design_color .colorGreen { width: calc( 100vw * 200 / 1920 ); background: #2CD18A; border-radius: 0 20% 0 0; }
+.designSection .design_color .colorGry { width: calc( 100vw * 500 / 1920 ); background: #F5F6FA; border-radius: 0 0 0 20%; }
+.designSection .design_color .colorIndigo { width: calc( 100vw * 200 / 1920 ); color: #fff; background: #00203F; border-radius: 0 0 20% 0; }
 
 .designSection article .logoTxt { width: calc( 100vw * 400 / 1920 ); margin-right: 10%; line-height: 150%; } 
+
+
+.designSection .design_type { font-weight: 300; }
+.designSection .design_type .typeWeight { display: inline-block; margin-right: calc( 100vw * 40 / 1920 ); font-size: calc( 100vw * 50 / 1920 ); cursor: pointer; }
+.designSection .design_type .weightTxt { display: inline-block; color: #2CD18A; font-size: calc( 100vw * 30 / 1920 ); }
+
 
 /* ------------------- section3 ----------------------- */
 
@@ -151,27 +165,36 @@ header .headerInner nav #menu li.active a { color: #00203F; }
 .todoListInfo article .todoImg { width: 45%; } 
 
 /* ----------------- */
-.todoExper { padding: calc( 100vw * 50 / 1920 ); }
+.todoExper { padding: calc( 100vw * 150 / 1920 ) 0; }
+.todoExper h2 { margin-bottom: calc( 100vw * 80 / 1920 );}
 
-.todoExper .container { display: flex; justify-content: space-between; align-items: center;}
+.todoExper .container { display: flex; justify-content: space-around; align-items: center;}
 
-.todoExper .container #todoList li { margin: calc( 100vw * 15 / 1920 ) 0; padding: calc( 100vw * 10 / 1920 ) calc( 100vw * 20 / 1920 ); border-radius: calc( 100vw * 25 / 1920 ); box-shadow: calc( 100vw * 1 / 1920 ) calc( 100vw * 3 / 1920 ) calc( 100vw * 10 / 1920 ) rgba(105, 105, 105, 0.365) ;}
+.todoExper .container #todoList li { width: calc( 100vw * 500 / 1920 ); margin: calc( 100vw * 25 / 1920 ) 0; padding: calc( 100vw * 30 / 1920 ) calc( 100vw * 40 / 1920 ); font-weight: 600; border-radius: calc( 100vw * 45 / 1920 ); box-shadow: calc( 100vw * 1 / 1920 ) calc( 100vw * 3 / 1920 ) calc( 100vw * 10 / 1920 ) rgba(105, 105, 105, 0.365) ;}
+.todoExper .container #todoList li label { padding-right: calc( 100vw * 100 / 1920 );}
 
-.todoExper .form-group label { display: block;} 
-.todoExper .form-group input { width: calc( 100vw * 300 / 1920 ); height: calc( 100vw * 200/ 1920 ); margin-bottom: calc( 100vw * 20 / 1920 ); border-radius: calc( 100vw * 25 / 1920 );}
+.todoExper .container #todoList li .btn { padding: calc( 100vw * 7 / 1920 ) calc( 100vw * 15 / 1920 ); margin: 0 calc( 100vw * 5 / 1920); background: none; border: calc( 100vw * 1.5 / 1920 ) solid #00203F; border-radius: calc( 100vw * 20 / 1920 ); font-family: Pretendard; font-weight: 500; cursor: pointer; transition: all .3s; }
+.todoExper .container #todoList li .btn:hover { color: #fff; background: #00203F; }  
+.todoExper .container #todoList li .btn-success::before { content: 'check'; } 
+.todoExper .container #todoList li .btn-danger::before { content: 'delete'; } 
+.todoExper .container #todoList .uncompleted label { color: rgba(33, 43, 54, 0.643); text-decoration: line-through; } 
 
-.todoExper .form-group div button { padding: calc( 100vw * 8 / 1920 ) calc( 100vw * 17 / 1920 ); background: transparent; border: calc( 100vw * 1.5 / 1920 ) solid #00203F; border-radius: calc( 100vw * 22 / 1920 ); font-family: Pretendard; transition: all .3s; cursor: pointer; }
+.todoExper .form-group { display: flex; align-items: center; flex-direction: column; }
+.todoExper .form-group label { margin-bottom: calc( 100vw * 20 / 1920 ); font-size: calc( 100vw * 25 / 1920 ); font-weight: 700; } 
+.todoExper .form-group input { width: calc( 100vw * 300 / 1920 ); height: calc( 100vw * 200/ 1920 ); padding: calc( 100vw * 25 / 1920 ); margin-bottom: calc( 100vw * 20 / 1920 ); border-radius: calc( 100vw * 25 / 1920 ); font-family: Pretendard; font-size: calc( 100vw * 25 / 1920 );}
+
+.todoExper .form-group div button { padding: calc( 100vw * 10 / 1920 ) calc( 100vw * 20 / 1920 ); background: transparent; border: calc( 100vw * 2 / 1920 ) solid #00203F; border-radius: calc( 100vw * 24 / 1920 ); font-family: Pretendard; font-weight: 600; font-size: calc( 100vw * 18 / 1920 ); transition: all .3s; cursor: pointer; }
 .todoExper .form-group div button:hover { background: #00203F; color: #fff; }
 
 /* -------------------------------- */
 
-.community .comm_mockup { width: 38%;}
+.community .comm_mockup { width: 38%; }
 
 /* ------------------- section7, 8, 9 ----------------------- */
 
-.allMockup { background: url(../source/allMockup_bg.png) no-repeat center center fixed; background-size: cover; color: #fff; padding: calc( 100vw * 400 / 1920 ) 0;}
-.allMockup article h3 img { width: calc( 100vw * 300 / 1920 ); }
-.allMockup article p { width: calc( 100vw * 400 / 1920 ); padding-top: calc( 100vw * 10 / 1920 ); word-break: keep-all; line-height: 150%; border-top: calc( 100vw * 2 / 1920 ) solid #fff;}
+.allMockup { display: flex; align-items: center; background: url(../source/allMockup_bg.png) no-repeat center center fixed; background-size: cover; color: #fff; padding: calc( 100vw * 400 / 1920 ) 0; }
+.allMockup article h3 img { width: calc( 100vw * 300 / 1920 ); margin-bottom: calc( 100vw * 25 / 1920 ); pointer-events: none; }
+.allMockup article p { width: calc( 100vw * 400 / 1920 ); padding-top: calc( 100vw * 25 / 1920 ); word-break: keep-all; line-height: 150%; border-top: calc( 100vw * 2 / 1920 ) solid #fff;}
 
 /* -------------- footer ------------------ */
 
@@ -191,7 +214,8 @@ footer #scrollTop .topTxt { display: block; margin-top: 17px; font-size: 10px; }
 
 footer .footerInfo { display: flex; justify-content: space-between; font-size: calc( 100vw * 17 / 1920 ); }
 
-footer .footerInfo dl dt { font-weight: 700; margin-bottom: calc( 100vw * 10 / 1920 );}
+footer .footerInfo dl dt { font-weight: 700; margin-bottom: calc( 100vw * 10 / 1920 ); }
+footer .footerInfo dl dd { line-height: 140%; }
 
 footer #copyright { margin-top: calc( 100vw * 50 / 1920 ); font-size: calc( 100vw * 15 / 1920 );} 
 
