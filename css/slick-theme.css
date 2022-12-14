@@ -84,7 +84,7 @@
 [dir='rtl'] .slick-next
 {
     /* right: auto; */
-    right: -25px;
+    right: calc( 100vw * -25 / 1920);
 }
 .slick-next:before
 {
@@ -159,7 +159,6 @@
 }
 .slick-dots li button:before
 {
-    font-family: 'slick';
     font-size: 6px;
     line-height: 20px;
 
