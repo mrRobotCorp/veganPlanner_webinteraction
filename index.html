@@ -19,7 +19,8 @@
     <link rel="icon" href="./source/favicon-32x32.png" sizes="32x32" />
     <link rel="apple-touch-icon" href="./source/apple-icon-180x180.png" sizes="180x180" />
 
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
 
 </head>
@@ -81,14 +82,18 @@
 
         <article class="inner design_color">
             <div class="colorinfo">
-                <h3>Color</h3>
-                <p class="logoTxt">
-                    전체적으로 푸릇푸릇하고 시원안 비주얼을 컨셉으로하여 부드러운 화이트톤으로 안정감 있어 보이게 
-                    했습니다. 시원한 녹색과 남색을 포인트 컬러로 사용했습니다.
-                </p>
-                <p class="colorKeyword">생기있는</p>
-                <p class="colorKeyword">친근한</p>
-                <p class="colorKeyword">부드러운</p>
+                <div>
+                    <h3>Color</h3>
+                    <p class="logoTxt">
+                        전체적으로 푸릇푸릇하고 시원한 비주얼을 컨셉으로하여 부드러운 화이트톤으로 안정감 있어 보이게 
+                        했습니다. 시원한 녹색과 남색을 포인트 컬러로 사용했습니다.
+                    </p>
+                </div>
+                <div class="colorKeywordAll">
+                    <p class="colorKeyword">생기있는</p>
+                    <p class="colorKeyword">친근한</p>
+                    <p class="colorKeyword">부드러운</p>
+                </div>
             </div>
             <div class="colorAll">
                 <div class="colorBox colorWh">White</div>
@@ -101,6 +106,11 @@
         <article class="inner design_type">
             <h3>Typeface</h3>
             <p class="typeWeight">비건 어떻게 시작하지?</p>
+            <div class="typeAll">
+                <img class="typeSandoll" src="./source/typeSandoll.png">
+                <img class="typeNoto" src="./source/typeNoto.png">
+            </div>
+            <p class="typeTxt">Noto Sans로 가독성이 높은 서체로 전체 본문에 사용하였습니다.</p>
         </article>
     </section>
 
@@ -147,7 +157,7 @@
                 </div>
                 <div class="form-group">
                     <label for="itemInput">리스트 추가하기</label>
-                    <input type="text" class="form-control" id="itemInput" maxlength="14">
+                    <input type="text" class="form-control" id="itemInput" maxlength="14" placeholder="원하는 투두 리스트를 작성해보세요.">
                     <div>
                         <button id="addButton" class="btn btn-primary">추가하기</button>
                         <button id="clearButton" class="btn btn-danger">모두 삭제</button>
@@ -162,7 +172,17 @@
             함께 <span class="green">공유</span>하는 <span class="green">커뮤니티</span>
         </h2>
         <article>
+            <p class="commTxt commTxt0">
+                다양한 이벤트를 함께 참여하며, 서로 공유하고 즐길 수 있어요! 물론, 자랑도 할 수 있답니다.
+            </p>
+            <p class="commTxt commTxt1">
+                인기글, 최신순 등 다양한 순서로 글을 확인할 수 있고, SNS로 쉽게 공유할 수도 있습니다!
+            </p>
+            <img class="comm_bottom" src="./source/comm_page0.png">
+            <img class="comm_bottom" src="./source/comm_page1.png">
             <img class="comm_mockup" alt="" src="./source/community_mockup.png">
+            <img class="comm_bottom" src="./source/comm_page2.png">
+            <img class="comm_bottom" src="./source/comm_page3.png">
         </article>
     </section>
 
@@ -171,7 +191,8 @@
             <span class="green">포인트</span>를 모아 <span class="green">선물 교환</span>!
         </h2>
         <article>
-            
+            <img class="point0" src="./source/point0.png">
+            <img class="point1" src="./source/point1.png">
         </article>
     </section>
 
@@ -223,7 +244,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
     <script src="./js/script.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/59b51e96a0.js" crossorigin="anonymous"></script> -->
 </body>
 </html>

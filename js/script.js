@@ -198,28 +198,27 @@ document.addEventListener("DOMContentLoaded", function() {
     clearButton.addEventListener('click', clearList);
 
     // ------------------- DOM element 추가  ----------------------
-    // 마크업 더러워서.. 일단 그냥 js로 추가...
     const todoFrameAll = document.querySelector('.todoFrameAll');
     
     todoFrameAll.insertAdjacentHTML('afterbegin', `
         <div class='todoFrame0'>
             <img class='todoImg todo0' src='./source/todoFrame0.png' alt='투두리스트 기능 메뉴1'>
-            <p class='leftLine todo0_txt0'>쉽게 투두 리스트를 실천하고 포인트를 모아봅시다!</p>
-            <p class='leftLine todo0_txt1'>쉽게 추가하고 수정할 수 있어요!</p>
+            <p class='leftLine todo_txt todo0_txt0'>쉽게 투두 리스트를 실천하고 포인트를 모아봅시다!</p>
+            <p class='leftLine todo_txt todo0_txt1'>쉽게 추가하고 수정할 수 있어요!</p>
         </div>
         <div class='todoFrame1'>
             <img class='todoImg todo1' src='./source/todoFrame1.png' alt='투두리스트 기능 메뉴1'>
-            <p class='leftLine todo1_txt'>처음에 뭘 할지 모르겠으면 추천리스트를 해보세요!</p>
+            <p class='leftLine todo_txt todo1_txt'>처음에 뭘 할지 모르겠으면 추천리스트를 해보세요!</p>
         </div>
         <div class='todoFrame2'>
             <img class='todoImg todo2' src='./source/todoFrame2.png' alt='투두리스트 기능 메뉴1'>
-            <p class='rightLine todo2_txt0'>친구들과 함께라면 좀 더 열심히 할 수 있어요!</p>
-            <p class='rightLine todo2_txt1'>이미 달성한 친구를 보고 경쟁해봅시다!</p>
-            <p class='leftLine todo2_txt2'>힘내라고 하트를 눌러줘요! 모두 함께 힘내봅시다!</p>
+            <p class='rightLine todo_txt todo2_txt0'>친구들과 함께라면 좀 더 열심히 할 수 있어요!</p>
+            <p class='rightLine todo_txt todo2_txt1'>이미 달성한 친구를 보고 경쟁해봅시다!</p>
+            <p class='leftLine todo_txt todo2_txt2'>힘내라고 하트를 눌러줘요! 모두 함께 힘내봅시다!</p>
         </div>
         <div class='todoFrame3'>
             <img class='todoImg todo3' src='./source/todoFrame3.png' alt='투두리스트 기능 메뉴1'>
-            <p class='rightLine todo3_txt'>와! 벌써 이렇게 했다니! 내가 해낸 리스트를 보고 성취감을 느낄 수 있어요!</p>
+            <p class='rightLine todo_txt todo3_txt'>와! 벌써 이렇게 했다니! 내가 해낸 리스트를 보고 성취감을 느낄 수 있어요!</p>
         </div>
     `);
 
@@ -239,7 +238,6 @@ $(document).ready(function() {
         $('.testImg').css('left', '100px')
     });
 
-    // ------------ 글자 굵기 증가 ------------------ 
     let num = 300;
     // let typeNum = $('.typeWeight').css('fontWeight');
 
@@ -261,6 +259,5 @@ $(document).ready(function() {
         } else if ( num >= 900 ) {
             $('.weightTxt').text('Bold');
         }
-        // switch 구문 사용
     });
 })
