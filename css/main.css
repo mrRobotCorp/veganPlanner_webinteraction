@@ -159,17 +159,17 @@ header .headerInner nav #menu li.active a { color: #00203F; }
 
 .testSection h2 { float: right; } 
 
-.testSection .testFrame { background: url(../source/mockup_bg.png) center center no-repeat; background-size: contain; width: calc(100vw * 480 / 1920); height: calc(100vw * 880 / 1920); overflow-y: hidden; } 
+.testSection .testFrame { position: relative; padding-bottom: calc( 100vw * 150 / 1920 ); background: url(../source/mockup_bg.png) center center no-repeat; background-size: contain; width: calc(100vw * 520 / 1920); height: calc(100vw * 880 / 1920); overflow: hidden; } 
 
-.testSection .testFrame .testImg { display: flex; justify-content: space-between; align-items: center; margin: calc(100vw * 120 / 1920) 2% calc(100vw * 50 / 1920) 12%; } 
+.testSection .testFrame .testImg { position: absolute; width: calc( 100vw * 350 / 1920 ); display: flex; justify-content: space-between; align-items: center; margin: calc(100vw * 120 / 1920) 2% 0 15%; overflow-x: scroll; z-index: -10; } 
 
-.testSection .testFrame .testImg img { width: 90%; z-index: -10; } 
+.testSection .testFrame .testImg img { width: calc( 100vw * 350 / 1920 ); } 
 
-.testSection .testBtn { display: flex; flex-direction: column; justify-content: space-between; } 
+.testSection .testFrame .testBtn { height: 100%; display: flex; flex-direction: column; justify-content: flex-end;  } 
 
-.testSection .testBtn button { margin: 3% 20%; padding: calc(100vw * 12 / 1920) calc(100vw * 25 / 1920); color: #2CD18A; background: #fff; border: calc(100vw * 2 / 1920) solid #2CD18A; border-radius: calc(100vw * 25 / 1920); font-family: Pretendard; font-weight: 600; cursor: pointer; transition: all .2s; } 
+.testSection .testFrame .testBtn button { margin: 3% 20%; padding: calc(100vw * 12 / 1920) calc(100vw * 25 / 1920); color: #2CD18A; background: #fff; border: calc(100vw * 2 / 1920) solid #2CD18A; border-radius: calc(100vw * 25 / 1920); font-size: calc( 100vw * 17 / 1920 ); font-family: Pretendard; font-weight: 600; cursor: pointer; transition: all .2s; } 
 
-.testSection .testBtn button:hover { background: #2cd18a46; color: #2aae75; } 
+.testSection .testFrame .testBtn button:hover { background: #2cd18a46; color: #2aae75; } 
 
 /* ------------------- todo list --------------------- */
 .todoListInfo { height: 290vh; padding: calc(100vw * 100 / 1920) 0; background: url(../source/todoList_bg.png) center center no-repeat; background-size: cover; } 

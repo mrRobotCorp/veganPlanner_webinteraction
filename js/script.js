@@ -231,15 +231,35 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 $(document).ready(function() {
+    
+    // ----------------------- test button ------------------
+    $('.testBtn button').click( function() {
+        $('.testImg').animate({'left' : 'calc(100vw * -350 / 1920)'}, 1000);
+    });
+
+    
+    // $('.testA').click(function(){
+    //     const slideLeft = parseInt($('.testImg').css('left'));
+
+    //     if( slideLeft <= -600){
+    //         $('.testImg').animate({'left' : '-=600px'}, 1000);
+    //     }
+    // });
+
+    $('.testA').click(function(){
+        const slideLeft = parseInt($('.testImg').css('left'));
+        let leng = $('.testImg li').length;
+        leng = leng - 2;
+
+        if(slideLeft >= -350 * leng){
+            $('.slide-list').animate({'left' : '-=350px'}, 1000);
+        }
+    });
+
     // ------ 디자인 소개 섹션 슬라이드 -------------
     $('.designSection').slick();
 
-    $('.testBtn button').click( function() {
-        $('.testImg').css('left', '100px')
-    });
-
     let num = 300;
-    // let typeNum = $('.typeWeight').css('fontWeight');
 
     $('.typeWeight').click( function() {
         num = num + 100;
